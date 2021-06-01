@@ -1,0 +1,43 @@
+{
+  "profile": [
+    {
+      "id": 1,
+      "fname": "Niketan",
+      "lname": "Kumar",
+      "email": "niketan4u2@gmail.com",
+      "phone": "8553476755",
+      "age": 24,
+      "state": "Bihar",
+      "Country": "India",
+      "address": "Gopalpur,Pachrukhi",
+      "tags": "cricket",
+      "url": " "
+    },
+    {
+      "url": "C:\\fakepath\\Niketan.jpg",
+      "fname": "NIKETAN",
+      "lname": "KUMAR",
+      "email": "niketan4u2@gmail.com",
+      "phone": "8618160994",
+      "age": 24,
+      "state": "Bihar",
+      "Country": "Itely",
+      "address": "Vill.- Gopalpur, P.O+P.S-Pachrukhi, Dist.- Siwan, Bihar-841241",
+      "tags": "Football",
+      "id": 2
+    },
+    {
+      "url": "C:\\fakepath\\Niketan.png",
+      "fname": "NIKETAN",
+      "lname": "KUMAR",
+      "email": " ",
+      "phone": "8618160994",
+      "age": 31,
+      "state": "Bihar",
+      "Country": "India",
+      "address": "Vill.- Gopalpur, P.O+P.S-Pachrukhi, Dist.- Siwan, Bihar-841241",
+      "tags": " Video Games",
+      "id": 3
+    }
+  ]
+}

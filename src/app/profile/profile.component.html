@@ -1,0 +1,114 @@
+<form #profileForm="ngForm"  >
+    <div class="header" >
+        <h2>User Register</h2>
+    </div>
+
+    <div id="inline"> 
+      <div class="one">
+        <div class="container1">
+          <div style="text-align:left;">
+            <img [src]="url" *ngIf="url"  class="rounded" style="height: 120px; width: 100px;">
+            <input type="file" name="url" [(ngModel)]="profileObject.url" #url="ngModel" (change)="selectFile($event)" >
+            
+          </div>
+        </div>
+      </div> 
+
+      <div class="two">
+        <div class="container">
+          <div class="row mb-3">
+            <div class="col">
+              
+              <input type="text" class="form-control" name="fname" [(ngModel)]="profileObject.fname" #fname="ngModel" pattern="^[A-Za-z]+$" maxlength="20" id="exampleInputName" aria-describedby="fnameHelp" placeholder="Enter First Name" required>
+              <small class="errors" *ngIf="fname.invalid && (fname.dirty || fname.touched)">* Enter First Name</small>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" name="lname" [(ngModel)]="profileObject.lname"#lname="ngModel" pattern="^[A-Za-z]+$" maxlength="20" id="exampleInputName" aria-describedby="lnameHelp" placeholder="Enter Last Name" required>
+              <small class="errors" *ngIf="lname.invalid && (lname.dirty || lname.touched)">* Enter Last Name</small>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <input type="email" class="form-control" name="email" [(ngModel)]="profileObject.email" #email="ngModel" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" placeholder="Email" id="inputEmail" aria-describedby="emailHelp" required>
+              <small class="errors" *ngIf="email.invalid && (email.dirty || email.touched)">* Enter the Correct Email Address</small>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" class="form-control" name="phone" [(ngModel)]="profileObject.phone" #phone="ngModel" maxlength="10" pattern="^[789]\d{9}$" maxlength="10" placeholder="Phone Number" id="inputPhone" aria-describedby="phoneHelp" required >
+              <small class="errors" *ngIf="phone.invalid && (phone.dirty || phone.touched)">* Enter the correct mobile number</small>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <label for="customRange" class="form-label">Age</label>
+              <input type="range" class="form-range form-control" name="age" [(ngModel)]="profileObject.age" #age="ngModel" min="20" max="80" id="customRange" required>
+              <small class="errors" *ngIf="age.invalid && (age.dirty || age.touched)">* Select Age</small>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <select class="form-select form-control" name="state" [(ngModel)]="profileObject.state" #state="ngModel" aria-label="Default select example" aria-describedby="stateHelp" required>
+                <option selected>State</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Maharasta">Maharasta</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Andra Pradesh">Andra Pradesh</option>
+              </select>
+              <small class="errors" *ngIf="state.invalid && (state.dirty || state.touched)">* Select your state</small>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <select class="form-select form-control" name="Country" [(ngModel)]="profileObject.Country" #Country="ngModel" aria-label="Default select example" aria-describedby="CountryHelp" required>
+                <option selected>Country</option>
+                <option value="America">America</option>
+                <option value="Canada">Canada</option>
+                <option value="China">China</option>
+                <option value="India">India</option>
+                <option value="Japan">Japan</option>
+                <option value="Itely">Itely</option>
+              </select>
+              <small class="errors" *ngIf="Country.invalid && (Country.dirty || Country.touched)">* Select your Country</small>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+                <input type="text" class="form-control" name="address" [(ngModel)]="profileObject.address" #address="ngModel" placeholder="Address" id="inputAddress" aria-describedby="addressHelp" required>
+                <small class="errors" *ngIf="address.invalid && (address.dirty || address.touched)">* Enter your Address</small>
+              </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" class="form-control" name="tags" [(ngModel)]="profileObject.tags" #tags="ngModel" placeholder="Tags" id="inputTags" aria-describedby="tagsHelp" required>
+              <small class="errors" *ngIf="tags.invalid && (tags.dirty || tags.touched)">* Enter Your Hobbies</small>
+            </div>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Subscribe to newsletter
+            </label>
+          </div>
+
+          <div class="toolbar">
+            <button class="btn btn-primary" type="reset">Reset</button>
+            <button class="btn btn-primary" type="submit" *ngIf="!isEdit" (click)="createProfile(profileForm.value)">Submit</button>
+            <button class="btn btn-primary" type="submit" *ngIf="isEdit" (click)="updateProfile()" >Update</button>
+          </div>
+
+        </div>
+      </div>
+    </div> 
+
+    
+  </form>

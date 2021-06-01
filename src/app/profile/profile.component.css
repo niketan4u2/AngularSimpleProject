@@ -1,0 +1,40 @@
+.header{
+    background-color: aqua;
+    margin-top: 0px;
+    padding: 0px;
+    height: 40px;
+    width: 100%;
+}
+.container1{
+    height: 150px;
+    width: 160px;
+
+}
+
+#inline{
+    width:100%;
+    height:auto;
+    display:flex;
+} 
+.one{
+    width:200px;
+    height:100px;
+    margin:0px;
+} 
+.two{
+    width:100%;
+    height:100%;
+    margin-top: 10px;
+} 
+.toolbar>button
+{
+  margin: 5px;
+  padding: 5px;
+  text-align: right;
+}
+.errors{
+    color: red;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}

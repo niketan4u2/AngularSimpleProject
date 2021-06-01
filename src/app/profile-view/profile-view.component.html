@@ -1,0 +1,34 @@
+<h1>User Profile</h1>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Image url</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Email</td>
+        <td>Phone number</td>
+        <td>Age</td>
+        <td>State</td>
+        <td>Country</td>
+        <td>Address</td>
+        <td>Tags</td>
+        <td>Edit</td>
+        <td>Delete</td>
+        
+    </tr>
+    <tr *ngFor = "let data of profile">
+        <td>{{data.id}}</td>
+        <td>{{data.url}}</td>
+        <td>{{data.fname}}</td>
+        <td>{{data.lname}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.phone}}</td>
+        <td>{{data.age}}</td>
+        <td>{{data.state}}</td>
+        <td>{{data.Country}}</td>
+        <td>{{data.address}}</td>
+        <td>{{data.tags}}</td>
+        <td><button (click)="profileEdit(data)">Edit</button></td>
+        <td><button (click)="deleteProfile(data)">Delete</button></td>
+    </tr>
+</table>

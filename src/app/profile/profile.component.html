@@ -19,7 +19,7 @@
           <div class="row mb-3">
             <div class="col">
               
-              <input type="text" class="form-control" name="fname" ngModel #fname="ngModel" pattern="^[A-Za-z]+$" maxlength="20" id="exampleInputName" aria-describedby="fnameHelp" placeholder="Enter First Name" required>
+              <input type="text" class="form-control" name="fname" ngModel #fname="ngModel" placeholder="FirstName" pattern="^[A-Za-z]+$" maxlength="20" id="exampleInputName" aria-describedby="fnameHelp"  required>
               <small class="errors" *ngIf="fname.invalid && (fname.dirty || fname.touched)">* Enter First Name</small>
             </div>
             <div class="col">
@@ -81,7 +81,7 @@
 
           <div class="row mb-3">
             <div class="col">
-                <input type="text" class="form-control" name="address" ngModel #address="ngModel" placeholder="Address" id="inputAddress" aria-describedby="addressHelp" required>
+                <input type="text" class="form-control" name="address" ngModel #address="ngModel" placeholder="Address" id="inputAddress" required>
                 <small class="errors" *ngIf="address.invalid && (address.dirty || address.touched)">* Enter your Address</small>
               </div>
           </div>
